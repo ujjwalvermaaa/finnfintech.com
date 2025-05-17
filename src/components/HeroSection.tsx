@@ -46,7 +46,7 @@ const HeroSection = () => {
           className="h-32 w-32 lg:h-56 lg:w-56"
           style={{objectFit: 'contain'}}
         />
-        <span className="lg:hidden font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tighter whitespace-nowrap px-0.5 text-finn-800" style={{lineHeight: 1, letterSpacing: '-0.04em', maxWidth: '100vw', overflowX: 'auto', display: 'block'}}>FINN FINTECH PVT LTD</span>
+        <span className="block lg:hidden font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tighter whitespace-nowrap px-0.5 text-finn-800 mt-2 mb-2" style={{lineHeight: 1, letterSpacing: '-0.04em', maxWidth: '100vw', overflowX: 'auto', display: 'block'}}>FINN FINTECH PVT LTD</span>
       </div>
       {/* Enhanced gradient background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -116,10 +116,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-center lg:text-left space-y-6"
+            className="text-center lg:text-left space-y-6 mt-8 lg:mt-0"
           >
             <motion.div 
-              className="inline-flex items-center rounded-full bg-finn-100 px-3 py-1 text-sm text-finn-800 mb-4"
+              className="inline-flex items-center rounded-full bg-finn-100 px-3 py-1 text-sm text-finn-800 mb-4 mt-2 lg:mt-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -147,7 +147,7 @@ const HeroSection = () => {
               variants={textRevealVariants}
               initial="hidden"
               animate="visible"
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-display font-bold !leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-display font-bold !leading-tight mt-4 mb-4"
             >
               {"Simplify your finances".split("").map((char, index) => (
                 <motion.span
