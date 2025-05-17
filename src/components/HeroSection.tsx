@@ -19,7 +19,7 @@ const HeroSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.08,
+        staggerChildren: 0.04,
       },
     },
   };
@@ -30,7 +30,7 @@ const HeroSection = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.4,
+        duration: 0.25,
         ease: [0.33, 1, 0.68, 1],
       },
     },
@@ -46,7 +46,7 @@ const HeroSection = () => {
           className="h-32 w-32 lg:h-56 lg:w-56"
           style={{objectFit: 'contain'}}
         />
-        <span className="lg:hidden font-display font-bold text-xl uppercase tracking-wide mt-0 text-finn-800">FINN FINTECH PVT LTD</span>
+        <span className="lg:hidden font-display font-bold text-xs sm:text-sm md:text-lg uppercase tracking-tighter whitespace-nowrap px-0.5" style={{lineHeight: 1, letterSpacing: '-0.04em', maxWidth: '100vw', overflowX: 'auto', display: 'block'}}>FINN FINTECH PVT LTD</span>
       </div>
       {/* Enhanced gradient background elements */}
       <div className="absolute inset-0 overflow-hidden">
