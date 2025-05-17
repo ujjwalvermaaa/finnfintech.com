@@ -63,21 +63,21 @@ const EMICalculator = () => {
   };
   
   return (
-    <div className="max-w-5xl mx-auto p-6">
+    <div className="w-full max-w-full mx-auto p-2 box-border">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="grid lg:grid-cols-2 gap-8"
+        className="flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-8"
       >
         {/* Left Column - Input Controls */}
-        <div className="space-y-8">
-          <Card className="p-6 bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
-          <div className="space-y-6">
+        <div className="space-y-8 w-full max-w-full">
+          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white to-gray-50 border-none shadow-lg w-full max-w-full box-border mx-auto">
+          <div className="space-y-6 w-full max-w-full">
             <div>
-                <label className="block text-sm font-medium text-gray-600 mb-1">
+                <label className="block text-sm font-medium text-gray-600 mb-1 text-center">
                   Loan Amount
                 </label>
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex flex-col sm:flex-row items-center justify-between mb-2 gap-2 w-full">
                   <input
                     type="text"
                     value={formatIndianNumber(loanAmount)}
@@ -88,7 +88,7 @@ const EMICalculator = () => {
                         setLoanAmount(value);
                       }
                     }}
-                    className="text-2xl font-bold text-finn-800 bg-transparent border-b-2 border-finn-200 focus:border-finn-500 focus:outline-none w-48 appearance-none [appearance:textfield]"
+                    className="text-2xl font-bold text-finn-800 bg-transparent border-b-2 border-finn-200 focus:border-finn-500 focus:outline-none w-full max-w-[180px] appearance-none [appearance:textfield] text-center"
                     inputMode="numeric"
                     pattern="[0-9]*"
                     min={100000}
@@ -96,7 +96,7 @@ const EMICalculator = () => {
                     step={10000}
                     style={{ MozAppearance: 'textfield' }}
                   />
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-gray-500 mt-1 sm:mt-0">
                     Max: {formatCurrency(100000000)}
                   </span>
               </div>
@@ -115,11 +115,11 @@ const EMICalculator = () => {
             </div>
             
             <div>
-                <label className="block text-sm font-medium text-gray-600 mb-1">
+                <label className="block text-sm font-medium text-gray-600 mb-1 text-center">
                   Loan Tenure
                 </label>
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center">
+                <div className="flex flex-col sm:flex-row items-center justify-between mb-2 gap-2 w-full">
+                  <div className="flex items-center w-full justify-center">
                     <input
                       type="number"
                       value={tenure}
@@ -127,7 +127,7 @@ const EMICalculator = () => {
                         const value = Math.min(Math.max(Number(e.target.value), 1), 30);
                         setTenure(value);
                       }}
-                      className="text-2xl font-bold text-finn-800 bg-transparent border-b-2 border-finn-200 focus:border-finn-500 focus:outline-none w-20 appearance-none [appearance:textfield]"
+                      className="text-2xl font-bold text-finn-800 bg-transparent border-b-2 border-finn-200 focus:border-finn-500 focus:outline-none w-16 appearance-none [appearance:textfield] text-center"
                       inputMode="numeric"
                       pattern="[0-9]*"
                       min={1}
@@ -135,9 +135,9 @@ const EMICalculator = () => {
                       step={1}
                       style={{ MozAppearance: 'textfield' }}
                     />
-                    <span className="text-2xl font-bold text-finn-800 -ml-2">{tenure === 1 ? 'Year' : 'Years'}</span>
+                    <span className="text-2xl font-bold text-finn-800 ml-1">{tenure === 1 ? 'Year' : 'Years'}</span>
                   </div>
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-gray-500 mt-1 sm:mt-0">
                     Max: 30 years
                   </span>
               </div>
@@ -156,14 +156,14 @@ const EMICalculator = () => {
             </div>
             
             <div>
-                <label className="block text-sm font-medium text-gray-600 mb-1">
+                <label className="block text-sm font-medium text-gray-600 mb-1 text-center">
                   Interest Rate (% per annum)
                 </label>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-2xl font-bold text-finn-800">
+                <div className="flex flex-col sm:flex-row items-center justify-between mb-2 gap-2 w-full">
+                  <span className="text-2xl font-bold text-finn-800 text-center">
                     {interestRate}%
                   </span>
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-gray-500 mt-1 sm:mt-0">
                     Range: 0.5% - 20%
                   </span>
               </div>
@@ -185,9 +185,9 @@ const EMICalculator = () => {
         </div>
         
         {/* Right Column - Results */}
-        <div className="space-y-6">
-          <Card className="p-6 bg-gradient-to-br from-white to-gray-50 border-none shadow-lg">
-            <h3 className="text-lg font-semibold text-gray-800 mb-6">
+        <div className="space-y-6 w-full max-w-full mt-4 lg:mt-0">
+          <Card className="p-4 sm:p-6 bg-gradient-to-br from-white to-gray-50 border-none shadow-lg w-full max-w-full box-border mx-auto">
+            <h3 className="text-lg font-semibold text-gray-800 mb-6 text-center">
               Loan Summary
             </h3>
             <div className="grid gap-4">
@@ -198,14 +198,9 @@ const EMICalculator = () => {
                 transition={{ duration: 0.2 }}
               >
                 <span className="text-sm text-green-700 font-medium">Monthly EMI</span>
-                <motion.div 
-                  key={emi}
-                  initial={{ scale: 0.9 }}
-                  animate={{ scale: 1 }}
-                  className="text-2xl font-bold text-green-800"
-                >
+                <div className="text-3xl font-bold text-green-700 mt-1">
                   {formatCurrency(emi)}
-                </motion.div>
+                </div>
               </motion.div>
 
               <div className="grid grid-cols-2 gap-4">
