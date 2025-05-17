@@ -46,7 +46,7 @@ const HeroSection = () => {
           className="h-32 w-32 lg:h-56 lg:w-56"
           style={{objectFit: 'contain'}}
         />
-        <span className="lg:hidden font-display font-bold text-xs sm:text-sm md:text-lg uppercase tracking-tighter whitespace-nowrap px-0.5" style={{lineHeight: 1, letterSpacing: '-0.04em', maxWidth: '100vw', overflowX: 'auto', display: 'block'}}>FINN FINTECH PVT LTD</span>
+        <span className="lg:hidden font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tighter whitespace-nowrap px-0.5 text-finn-800" style={{lineHeight: 1, letterSpacing: '-0.04em', maxWidth: '100vw', overflowX: 'auto', display: 'block'}}>FINN FINTECH PVT LTD</span>
       </div>
       {/* Enhanced gradient background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -149,28 +149,15 @@ const HeroSection = () => {
               animate="visible"
               className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-display font-bold !leading-tight"
             >
-              <span className="hidden sm:inline">
-                {"Simplify your finances".split("").map((char, index) => (
-                  <motion.span
-                    key={index}
-                    variants={letterVariants}
-                    className={char === " " ? "inline-block w-2" : "inline-block"}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </span>
-              <span className="inline sm:hidden">
-                {"Simplify your finances".split("").map((char, index) => (
-                  <motion.span
-                    key={index}
-                    variants={letterVariants}
-                    className={char === " " ? "inline-block w-2" : "inline-block"}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </span>
+              {"Simplify your finances".split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  variants={letterVariants}
+                  className={char === " " ? "inline-block w-2" : "inline-block"}
+                >
+                  {char}
+                </motion.span>
+              ))}
               <br />
               {"with".split("").map((char, index) => (
                 <motion.span
