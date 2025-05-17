@@ -147,27 +147,30 @@ const HeroSection = () => {
               variants={textRevealVariants}
               initial="hidden"
               animate="visible"
-              className="text-4xl md:text-5xl lg:text-5xl font-display font-bold !leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-display font-bold !leading-tight"
             >
-              {"Simplify your".split("").map((char, index) => (
-                <motion.span
-                  key={index}
-                  variants={letterVariants}
-                  className={char === " " ? "inline-block w-2" : "inline-block"}
-                >
-                  {char}
-                </motion.span>
-              ))}
-              <br className="block lg:hidden" />
-              {"finances".split("").map((char, index) => (
-                <motion.span
-                  key={`finances-${index}`}
-                  variants={letterVariants}
-                  className={char === " " ? "inline-block w-2" : "inline-block"}
-                >
-                  {char}
-                </motion.span>
-              ))}
+              <span className="hidden sm:inline">
+                {"Simplify your finances".split("").map((char, index) => (
+                  <motion.span
+                    key={index}
+                    variants={letterVariants}
+                    className={char === " " ? "inline-block w-2" : "inline-block"}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </span>
+              <span className="inline sm:hidden">
+                {"Simplify your finances".split("").map((char, index) => (
+                  <motion.span
+                    key={index}
+                    variants={letterVariants}
+                    className={char === " " ? "inline-block w-2" : "inline-block"}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </span>
               <br />
               {"with".split("").map((char, index) => (
                 <motion.span
