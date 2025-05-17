@@ -46,7 +46,7 @@ const HeroSection = () => {
           className="h-32 w-32 lg:h-56 lg:w-56"
           style={{objectFit: 'contain'}}
         />
-        <span className="lg:hidden font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tighter whitespace-nowrap px-0.5 text-finn-800 mt-1 !mb-0" style={{lineHeight: 1, letterSpacing: '-0.04em', maxWidth: '100vw', overflowX: 'auto'}}>FINN FINTECH PVT LTD</span>
+        <span className="lg:hidden font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tighter whitespace-nowrap px-0.5 text-finn-800 mt-0 mb-0 lg:mt-4 lg:mb-4" style={{lineHeight: 1, letterSpacing: '-0.04em', maxWidth: '100vw', overflowX: 'auto'}}>FINN FINTECH PVT LTD</span>
       </div>
       {/* Enhanced gradient background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -119,7 +119,7 @@ const HeroSection = () => {
             className="text-center lg:text-left space-y-6 mt-0 sm:mt-2 md:mt-4 lg:mt-0 w-full min-w-0 overflow-visible"
           >
             <motion.div 
-              className="inline-flex items-center rounded-full bg-finn-100 px-3 py-1 text-sm text-finn-800 mb-4 !mt-0 lg:mt-0"
+              className="inline-flex items-center rounded-full bg-finn-100 px-3 py-1 text-sm text-finn-800 mt-0 mb-0 lg:mt-4 lg:mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -147,7 +147,7 @@ const HeroSection = () => {
               variants={textRevealVariants}
               initial="hidden"
               animate="visible"
-              className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-display font-bold !leading-tight mt-4 mb-4 w-full min-w-0 overflow-visible"
+              className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-display font-bold !leading-tight mt-4 mb-4 w-full min-w-0 overflow-visible break-words"
             >
               {"Simplify your finances".split("").map((char, index) => (
                 <motion.span
@@ -198,7 +198,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="text-finn-800/80 text-lg max-w-xl mx-auto lg:mx-0"
+              className="text-finn-800/80 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mt-6 lg:mt-8"
             >
               Experience seamless financial services with competitive rates, quick processing time, and 100% secure transactions tailored to your unique needs.
             </motion.p>
