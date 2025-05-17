@@ -149,9 +149,19 @@ const HeroSection = () => {
               animate="visible"
               className="text-4xl md:text-5xl lg:text-5xl font-display font-bold !leading-tight"
             >
-              {"Simplify your finances".split("").map((char, index) => (
+              {"Simplify your".split("").map((char, index) => (
                 <motion.span
                   key={index}
+                  variants={letterVariants}
+                  className={char === " " ? "inline-block w-2" : "inline-block"}
+                >
+                  {char}
+                </motion.span>
+              ))}
+              <br className="block lg:hidden" />
+              {"finances".split("").map((char, index) => (
+                <motion.span
+                  key={`finances-${index}`}
                   variants={letterVariants}
                   className={char === " " ? "inline-block w-2" : "inline-block"}
                 >
