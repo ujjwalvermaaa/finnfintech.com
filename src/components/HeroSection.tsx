@@ -37,7 +37,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative h-screen flex items-center pb-16 pt-28 overflow-hidden">
+    <div className="relative h-screen flex items-center pb-16 pt-28 overflow-hidden box-border w-full max-w-full min-h-0 min-w-0">
       {/* Overlapping Large Logo */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 z-[60] pointer-events-none select-none flex flex-col items-center w-full max-w-full">
         <img 
@@ -46,7 +46,7 @@ const HeroSection = () => {
           className="h-32 w-32 lg:h-56 lg:w-56"
           style={{objectFit: 'contain'}}
         />
-        <span className="lg:hidden font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tighter whitespace-nowrap px-0.5 text-finn-800 mt-2 mb-0" style={{lineHeight: 1, letterSpacing: '-0.04em', maxWidth: '100vw', overflowX: 'auto'}}>FINN FINTECH PVT LTD</span>
+        <span className="lg:hidden font-display font-bold text-base sm:text-lg md:text-xl uppercase tracking-tighter whitespace-nowrap px-0.5 text-finn-800 mt-1 !mb-0" style={{lineHeight: 1, letterSpacing: '-0.04em', maxWidth: '100vw', overflowX: 'auto'}}>FINN FINTECH PVT LTD</span>
       </div>
       {/* Enhanced gradient background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -110,16 +110,16 @@ const HeroSection = () => {
         />
       </div>
       
-      <div className="container mx-auto px-2 sm:px-4 relative z-10 mt-20 max-w-full w-full overflow-x-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-2 sm:px-4 relative z-10 mt-20 w-full min-h-0 min-w-0 space-y-0 box-border overflow-visible">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full min-w-0 overflow-visible">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-center lg:text-left space-y-6 mt-4 sm:mt-6 md:mt-8 lg:mt-0 w-full max-w-full"
+            className="text-center lg:text-left space-y-6 mt-0 sm:mt-2 md:mt-4 lg:mt-0 w-full min-w-0 overflow-visible"
           >
             <motion.div 
-              className="inline-flex items-center rounded-full bg-finn-100 px-3 py-1 text-sm text-finn-800 mb-4 mt-1 lg:mt-0"
+              className="inline-flex items-center rounded-full bg-finn-100 px-3 py-1 text-sm text-finn-800 mb-4 !mt-0 lg:mt-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -147,7 +147,7 @@ const HeroSection = () => {
               variants={textRevealVariants}
               initial="hidden"
               animate="visible"
-              className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-display font-bold !leading-tight mt-4 mb-4 w-full max-w-full"
+              className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-display font-bold !leading-tight mt-4 mb-4 w-full min-w-0 overflow-visible"
             >
               {"Simplify your finances".split("").map((char, index) => (
                 <motion.span
