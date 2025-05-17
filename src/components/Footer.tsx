@@ -140,7 +140,7 @@ const Footer = () => {
         
         <div className="pt-8 border-t border-finn-800/50">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-finn-100/60 text-sm">
+            <p className="text-finn-100/60 text-sm whitespace-nowrap">
               &copy; {currentYear} FinnFintech. All rights reserved.
             </p>
           </div>
