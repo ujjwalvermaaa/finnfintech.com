@@ -39,26 +39,76 @@ const HeroSection = () => {
   return (
     <>
       {/* Mobile Hero Section */}
-      <div className="block md:hidden w-full min-w-0 max-w-full box-border bg-gradient-to-b from-finn-50/80 to-white/90">
-        <div className="flex flex-col items-center w-full px-3 pt-8 pb-4">
+      <div className="block md:hidden w-full min-w-0 max-w-full box-border bg-gradient-to-b from-finn-50/80 to-white/90 min-h-[85vh] flex flex-col justify-between">
+        <div className="flex flex-col items-center w-full px-3 pt-8 pb-4 flex-grow">
           <img src="/logo.png" alt="Finn Fintech Logo" className="h-20 w-20 mb-2" style={{objectFit: 'contain'}} />
-          <span className="font-display font-bold text-base uppercase tracking-tighter whitespace-nowrap text-finn-800 mb-1" style={{lineHeight: 1, letterSpacing: '-0.04em'}}>FINN FINTECH PVT LTD</span>
+          <span className="font-display font-bold text-lg uppercase tracking-tighter whitespace-nowrap text-finn-800 mb-1" style={{lineHeight: 1, letterSpacing: '-0.04em'}}>FINN FINTECH PVT LTD</span>
           <span className="text-xs text-finn-700 bg-finn-100 rounded-full px-3 py-1 mb-4">● Future of finance is here</span>
-          <h1 className="text-center font-display font-bold text-2xl leading-tight mb-2 break-words">
-            Simplify your finances<br />with<br />
-            <span className="gradient-text block text-green-600 text-2xl font-bold mt-1">innovative loan<br />solutions</span>
-          </h1>
-          <p className="text-center text-finn-800/80 text-sm mt-3 mb-6 px-1">
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.04 },
+              },
+            }}
+            className="text-center font-display font-bold text-3xl leading-tight mb-4 break-words"
+          >
+            {"Simplify your finances".split("").map((char, idx) => (
+              <motion.span
+                key={idx}
+                variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.25 } } }}
+                className={char === " " ? "inline-block w-2" : "inline-block"}
+              >
+                {char}
+              </motion.span>
+            ))}
+            <br />
+            {"with".split("").map((char, idx) => (
+              <motion.span
+                key={`with-${idx}`}
+                variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.25 } } }}
+                className={char === " " ? "inline-block w-2" : "inline-block"}
+              >
+                {char}
+              </motion.span>
+            ))}
+            <br />
+            <span className="gradient-text block text-green-600 text-3xl font-bold mt-1">
+              {"innovative loan".split("").map((char, idx) => (
+                <motion.span
+                  key={`innovative-${idx}`}
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.25 } } }}
+                  className={char === " " ? "inline-block w-2" : "inline-block"}
+                >
+                  {char}
+                </motion.span>
+              ))}
+              <br />
+              {"solutions".split("").map((char, idx) => (
+                <motion.span
+                  key={`solutions-${idx}`}
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.25 } } }}
+                  className={char === " " ? "inline-block w-2" : "inline-block"}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </span>
+          </motion.h1>
+          <p className="text-center text-finn-800/80 text-base mt-3 mb-10 px-1">
             Experience seamless financial services with competitive rates, quick processing time, and 100% secure transactions tailored to your unique needs.
           </p>
-          <div className="flex flex-col gap-3 w-full">
-            <a href="/loans" className="w-full">
-              <button className="w-full bg-green-500 text-white font-semibold py-3 rounded-lg shadow-md">Explore Loans</button>
-            </a>
-            <a href="/emi-calculator" className="w-full">
-              <button className="w-full border border-green-500 text-green-700 font-semibold py-3 rounded-lg">EMI Calculator</button>
-            </a>
-          </div>
+        </div>
+        <div className="flex flex-col gap-3 w-full px-3 mb-6">
+          <Link to="/loans" className="w-full">
+            <button className="w-full bg-green-500 text-white font-semibold py-3 rounded-lg shadow-md">Explore Loans</button>
+          </Link>
+          <Link to="/emi-calculator" className="w-full">
+            <button className="w-full border border-green-500 text-green-700 font-semibold py-3 rounded-lg">EMI Calculator</button>
+          </Link>
         </div>
       </div>
       {/* Desktop Hero Section (unchanged) */}
