@@ -9,7 +9,7 @@ const BankingPartnersSection = () => {
       logo: "/bank_logo/govt_banks/sbi.jpg"
     },
     {
-      name: "Bank of Maratha",
+      name: "Bank of Maratha bank",
       description: "Leading public sector bank",
       logo: "/bank_logo/govt_banks/maharastra.png"
     },
