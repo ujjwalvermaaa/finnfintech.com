@@ -174,7 +174,7 @@ const About = () => {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-display font-bold mb-6"
             >
-              Meet Our <span className="gradient-text">Co-Founder and Key Person</span>
+              Meet Our <span className="gradient-text">CEO</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -209,7 +209,7 @@ const About = () => {
                     />
                   </div>
                   <h3 className="text-2xl font-semibold text-finn-800 mb-2">Deepak Verma</h3>
-                  <p className="text-finn-600 font-medium mb-4">Co-Founder</p>
+                  <p className="text-finn-600 font-medium mb-4">CEO</p>
                   <div className="space-y-2 mb-4">
                     <p className="text-finn-700/80">9999673440</p>
                     <p className="text-finn-700/80">9599156255</p>
