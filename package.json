@@ -1,44 +1,14 @@
 {
-  "name": "finnfintech-website",
+  "name": "vite_react_shadcn_ts",
   "private": true,
-  "version": "1.0.0",
-  "description": "Modern financial services platform built with React, TypeScript, and Tailwind CSS",
+  "version": "0.0.0",
   "type": "module",
-  "author": {
-    "name": "FinnFintech Team",
-    "email": "info@finnfintech.com",
-    "url": "https://finnfintech.com"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ujjwalvermaaa/finnfintech.com.git"
-  },
-  "keywords": [
-    "react",
-    "typescript",
-    "tailwindcss",
-    "financial-services",
-    "loans",
-    "fintech",
-    "vite"
-  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "build:dev": "vite build --mode development",
-    "build:prod": "vite build --mode production",
-    "preview": "vite preview",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "eslint . --ext ts,tsx --fix",
-    "type-check": "tsc --noEmit",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
-    "clean": "rm -rf dist node_modules/.vite",
-    "analyze": "npm run build && npx vite-bundle-analyzer dist/assets",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -107,30 +77,10 @@
     "globals": "^15.9.0",
     "lovable-tagger": "^1.1.7",
     "postcss": "^8.4.47",
-    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.11",
+    "terser": "^5.43.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1",
-    "vite-bundle-analyzer": "^0.7.0",
-    "vitest": "^2.1.8",
-    "@vitest/ui": "^2.1.8",
-    "@vitest/coverage-v8": "^2.1.8"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "vite": "^5.4.1"
   }
 }
